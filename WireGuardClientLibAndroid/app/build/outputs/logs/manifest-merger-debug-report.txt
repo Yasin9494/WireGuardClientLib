@@ -1,0 +1,32 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:1:1-12:12
+	package
+		INJECTED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:1:11-69
+application
+ADDED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:2:5-11:19
+service#com.wireguard.android.backend.GoBackend$VpnService
+ADDED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:3:9-10:19
+	android:exported
+		ADDED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:6:13-37
+	android:permission
+		ADDED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:5:13-69
+	android:name
+		ADDED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:4:13-78
+intent-filter#action:name:android.net.VpnService
+ADDED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:7:13-9:29
+action#android.net.VpnService
+ADDED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:8:17-64
+	android:name
+		ADDED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:8:25-62
+uses-sdk
+INJECTED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml
+INJECTED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml

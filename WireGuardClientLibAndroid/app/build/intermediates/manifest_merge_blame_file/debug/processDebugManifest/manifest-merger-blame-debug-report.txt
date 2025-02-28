@@ -1,0 +1,26 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.wireguardclientlib" >
+4
+5    <uses-sdk android:minSdkVersion="23" />
+6
+7    <application>
+7-->C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:2:5-11:19
+8        <service
+8-->C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:3:9-10:19
+9            android:name="com.wireguard.android.backend.GoBackend$VpnService"
+9-->C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:4:13-78
+10            android:exported="false"
+10-->C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:6:13-37
+11            android:permission="android.permission.BIND_VPN_SERVICE" >
+11-->C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:5:13-69
+12            <intent-filter>
+12-->C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:7:13-9:29
+13                <action android:name="android.net.VpnService" />
+13-->C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:8:17-64
+13-->C:\temp\native\WireGuardTestApp\WireGuardClientLib\WireGuardClientLibAndroid\app\src\main\AndroidManifest.xml:8:25-62
+14            </intent-filter>
+15        </service>
+16    </application>
+17
+18</manifest>

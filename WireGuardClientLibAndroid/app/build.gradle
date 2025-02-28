@@ -15,8 +15,10 @@ android {
 repositories {
     google()
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
     implementation 'com.wireguard.android:tunnel:1.0.20211029'
+    implementation 'com.github.stealthcopter:AndroidNetworkTools:0.4.5.3'
 }
