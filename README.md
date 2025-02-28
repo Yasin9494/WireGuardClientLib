@@ -129,9 +129,17 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 This project is licensed under the MIT License.
 
 
-Donation:
+## Donation:
+BTC: 
 ```bash
-BTC: bc1q70efnu623mu8d3x6hykf69fa8nnw52mkyfgh45
-ETH: 0xf6D6a9EEE11A5f38E7b3668424340caD354800E4
-SOL: 2TgHnabSShwfLrwyhzW1ncpxtHKEgFiDwva2K5kvFKs4
+bc1q70efnu623mu8d3x6hykf69fa8nnw52mkyfgh45
+```
+ETH:
+```bash
+0xf6D6a9EEE11A5f38E7b3668424340caD354800E4
+```
+SOL: 
+```bash
+2TgHnabSShwfLrwyhzW1ncpxtHKEgFiDwva2K5kvFKs4
+```
 
