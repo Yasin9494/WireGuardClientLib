@@ -1,11 +1,11 @@
-import { NativeModules, Platform } from 'react-native';
+import { NativeModules } from 'react-native';
 
 const { WireGuardClientLib } = NativeModules;
 
-const WireGuard = {
-  connect: (config) => {
+export default {
+  connect: (wgQuickConfig) => {
     return new Promise((resolve, reject) => {
-      WireGuardClientLib.connect(config, (success, error) => {
+      WireGuardClientLib.connect(wgQuickConfig, (success, error) => {
         if (success) resolve();
         else reject(new Error(error));
       });
@@ -21,6 +21,10 @@ const WireGuard = {
     });
   },
 
+  status: () => WireGuardClientLib.getStatus(),
+
+  stats: () => WireGuardClientLib.getStats(),
+
   ping: (host) => {
     return new Promise((resolve, reject) => {
       WireGuardClientLib.pingServer(host, (latencyMs, error) => {
@@ -28,15 +32,5 @@ const WireGuard = {
         else resolve(latencyMs);
       });
     });
-  },  
-
-  getStatus: () => WireGuardClientLib.getStatus(),
-
-  getStats: () => WireGuardClientLib.getStats(),
-
-  ping: () => WireGuardClientLib.pingServer(),
+  },
 };
-
-
-
-export default WireGuard;

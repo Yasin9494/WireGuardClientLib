@@ -4,6 +4,7 @@ import android.content.Context;
 import com.wireguard.android.backend.GoBackend;
 import com.wireguard.android.backend.Tunnel;
 import com.wireguard.config.Config;
+import com.stealthcopter.networktools.Ping;
 
 public class WireGuardClient implements WireGuardInterface {
 
@@ -16,20 +17,10 @@ public class WireGuardClient implements WireGuardInterface {
     }
 
     @Override
-    public void connect(WireGuardConfiguration configuration, ConnectionCallback callback) {
+    public void connect(String wgQuickConfig, ConnectionCallback callback) {
         try {
-            Config wgConfig = Config.parse(
-                    "[Interface]\n" +
-                    "PrivateKey = " + configuration.interfacePrivateKey + "\n" +
-                    "Address = 10.0.0.2/32\n" +
-                    "DNS = " + String.join(", ", configuration.dnsServers) + "\n\n" +
-                    "[Peer]\n" +
-                    "PublicKey = " + configuration.peerPublicKey + "\n" +
-                    "Endpoint = " + configuration.peerEndpoint + "\n" +
-                    "AllowedIPs = " + String.join(", ", configuration.allowedIPs)
-            );
-
-            tunnel = backend.create("wg-tunnel", wgConfig, Tunnel.State.UP, null);
+            Config config = Config.parse(wgQuickConfig);
+            tunnel = backend.create("wg-tunnel", config, Tunnel.State.UP, null);
             currentStatus = WireGuardConnectionStatus.CONNECTED;
             callback.onSuccess();
         } catch (Exception e) {
@@ -64,8 +55,6 @@ public class WireGuardClient implements WireGuardInterface {
         return new WireGuardStats(0,0);
     }
 
-    import com.stealthcopter.networktools.Ping;
-
     @Override
     public void pingServer(String host, PingCallback callback) {
         Ping.onAddress(host).setTimeOutMillis(1000).doPing(new Ping.PingListener() {
@@ -75,9 +64,7 @@ public class WireGuardClient implements WireGuardInterface {
             }
 
             @Override
-            public void onFinished() {
-                
-            }
+            public void onFinished() {}
 
             @Override
             public void onError(Exception e) {
@@ -85,5 +72,4 @@ public class WireGuardClient implements WireGuardInterface {
             }
         });
     }
-
 }
